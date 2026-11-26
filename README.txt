@@ -21,3 +21,14 @@ https://github.com/shidest/Pet-Project-with-DOM-kt-/
 - Только нативные DOM API — без библиотек и фреймворков
 
 ## Структура
+
+shopping-list/
+├── index.html
+├── css/
+│ └── style.css
+├── js/
+│ ├── main.js # точка входа, связывает DOM-события со state и ui
+│ ├── state.js # состояние приложения: список и фильтр
+│ ├── storage.js # сохранение/загрузка из localStorage
+│ └── ui.js # отрисовка списка и подсчёт итогов
+└── README.md
