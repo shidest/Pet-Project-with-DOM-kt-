@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список покупок</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <h1>Список покупок</h1>
+
+    <form class="add-form" id="addForm">
+      <input type="text" id="nameInput" placeholder="Что купить?" required>
+      <input type="number" id="priceInput" placeholder="Цена" min="0" step="1">
+      <select id="categoryInput">
+        <option value="food">Продукты</option>
+        <option value="home">Для дома</option>
+        <option value="other">Другое</option>
+      </select>
+      <button type="submit">Добавить</button>
+    </form>
+
+    <div class="filters" id="filters">
+      <button data-filter="all" class="active">Все</button>
+      <button data-filter="food">Продукты</button>
+      <button data-filter="home">Для дома</button>
+      <button data-filter="other">Другое</button>
+    </div>
+
+    <ul class="list" id="list"></ul>
+
+    <div class="footer">
+      <span id="counter">0 покупок</span>
+      <span>К покупке: <b id="total">0</b> ₽</span>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
