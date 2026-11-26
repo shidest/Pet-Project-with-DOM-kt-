@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #f4f5f7;
+  color: #222;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 520px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 22px;
+}
+
+.add-form {
+  display: grid;
+  grid-template-columns: 1fr 75px 115px 90px;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.add-form input,
+.add-form select,
+.add-form button {
+  padding: 8px 4px;
+  
+  border: 1px solid #d6d9e0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fff;
+}
+
+.add-form button {
+  background: #4a7cff;
+  color: #fff;
+  border-color: #4a7cff;
+  cursor: pointer;
+}
+
+.add-form button:hover {
+  background: #3a6bef;
+}
+
+.filters {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.filters button {
+  padding: 6px 12px;
+  border: 1px solid #d6d9e0;
+  background: #fff;
+  border-radius: 999px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.filters button.active {
+  background: #4a7cff;
+  border-color: #4a7cff;
+  color: #fff;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid #e6e8ec;
+  border-radius: 8px;
+}
+
+.item.done .title {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.item .info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.item .title {
+  font-size: 15px;
+  word-break: break-word;
+}
+
+.item .meta {
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.item .del {
+  border: none;
+  background: none;
+  color: #bbb;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.item .del:hover {
+  color: #e04a4a;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid #e6e8ec;
+  font-size: 14px;
+  color: #555;
+}
+
+.empty {
+  text-align: center;
+  color: #999;
+  padding: 24px 0;
+  font-size: 14px;
+}
+
+@media (max-width: 520px) {
+  .add-form {
+    grid-template-columns: 1fr 1fr;
+  }
+  .add-form input[type="text"] {
+    grid-column: 1 / -1;
+  }
+}
