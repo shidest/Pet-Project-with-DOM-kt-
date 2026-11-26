@@ -9,11 +9,13 @@ body {
   margin: 0;
   padding: 20px;
   min-height: 100vh;
+  display: flex;
 }
 
 .app {
+   width: 100%;
   max-width: 520px;
-  margin: 0 auto;
+  margin: auto;
   background: #fff;
   border-radius: 12px;
   padding: 24px;
